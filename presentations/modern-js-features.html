@@ -73,69 +73,22 @@ Prism.languages.javascript=Prism.languages.extend("clike",{"class-name":[Prism.l
     <style>
       code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
     </style>
+    <style>
+      /* fix wrong formated numbers in highlighted code sections */
+      .language-js .number {
+          padding: 0;
+          display: inline;
+      }
+    </style>
   </head>
   <body>
-    <header role="banner">
-      <nav role="navigation">
-        <p class="logo"><a href="../index.html" title="WebSlides">WebSlides</a></p>
-        <ul>
-          <li class="github">
-            <a rel="external" href="https://github.com/webslides/webslides" title="Github">
-              <svg class="fa-github">
-                <use xlink:href="#fa-github"></use>
-              </svg>
-              <em>WebSlides</em>
-            </a>
-          </li>
-          <li class="twitter">
-            <a rel="external" href="https://twitter.com/webslides" title="Twitter">
-              <svg class="fa-twitter">
-                <use xlink:href="#fa-twitter"></use>
-              </svg>
-              <em>@WebSlides</em>
-            </a>
-          </li>
-          <!--  <li class="dribbble"><a rel="external" href="http://dribbble.com/webslides" title="Dribbble"><svg class="fa-dribbble"><use xlink:href="#fa-dribbble"></use></svg> <em>webslides</em></a></li> -->
-        </ul>
-      </nav>
-    </header>
 
     <main role="main">
       <article id="webslides" class="vertical">
         <section>
           <!--.wrap = container (width: 90%) -->
           <div class="wrap aligncenter">
-            <h1 class="text-landing">Moderne CSS & JS Features</h1>
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap aligncenter">
-          <!-- alignment [class*="content-"] = container max-width:50% = 600px -->
-            <h2><strong>CSS Flexbox</strong></h2>
-            <p>Flexbox ist eine Layoutmethode zum Anordnen von Elementen in Zeilen oder Spalten. Elemente werden gestreckt, um zusätzlichen Platz zu füllen, und schrumpfen, um in kleinere Räume zu passen.</p>
-            <nav>
-                <ul>
-                  <li><a href="https://developer.mozilla.org/de/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank" rel="noopener noreferrer">mozilla.org</a></li>
-                  <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener noreferrer">CSS Tricks</a></li>
-                </ul>
-              </nav>
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap aligncenter">
-          <!-- alignment [class*="content-"] = container max-width:50% = 600px -->
-            <h2><strong>CSS Grid</strong></h2>
-            <p>Grid Layout ermöglicht es, Elemente in Spalten und Reihen auszurichten, ähnlich wie in Tabellen. Jedoch gibt es viel mehr Gestaltungsmöglichkeiten und diese sind einfacher umzusetzen mit CSS Grid als es mit Tabellen der Fall war. Beispielsweise kann das Kindelement eines Grid-Container-Elements so positioniert werden, dass es andere überlappt und überlagert, ähnlich wie bei mit CSS positionierten Elementen.</p>
-            <nav>
-                <ul>
-                  <li><a href="https://developer.mozilla.org/de/docs/Web/CSS/CSS_Grid_Layout" target="_blank" rel="noopener noreferrer">mozilla.org</a></li>
-                  <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank" rel="noopener noreferrer">CSS Tricks</a></li>
-                </ul>
-              </nav>
+            <h1 class="text-landing">Moderne JS Features</h1>
           </div>
           <!-- .end .wrap -->
         </section>
@@ -144,468 +97,26 @@ Prism.languages.javascript=Prism.languages.extend("clike",{"class-name":[Prism.l
           <div class="wrap">
             <div class="grid vertical-align">
               <div class="column">
-                <div>
-                  <div class="grid-example__wrapper">
-                    <picture class="grid-example__picture">
-                      <img src="https://picsum.photos/id/1025/1440/900" class="grid-example__image">
-                    </picture>
-                    <div class="grid-example__text-container">
-                      <h3 class="grid-example__headline"><strong>Lorem Ipsum</strong></h3>
-                    </div>
-                  </div>
-                </div>
-                <style>
-                  .grid-example__wrapper {
-                    display: grid;
-                    grid-template-columns: 1fr;
-                    grid-template-rows: 1fr;
-                  }
-                  .grid-example__picture,
-                  .grid-example__text-container {
-                    grid-column-start: 1;
-                    grid-column-end: 1;
-                    grid-row-start: 1;
-                    grid-row-end: 1;
-                  }
-                  .grid-example__picture {
-                    z-index: 1;
-                  }
-                  .grid-example__picture img {
-                    min-height: 100%;
-                    object-fit: cover;
-                  }
-                  .grid-example__text-container {
-                    padding: 50px;
-                    z-index: 2;
-                  }
-                  .grid-example__headline {
-                    color: white;
-                    font-size: 80px;
-                  }
-                </style>
-              </div>
-              <!-- .end .column -->
-              <div class="column">
-                <pre><code class="language-html">&#x3C;div class=&#x22;grid-wrapper&#x22;&#x3E;
-  &#x3C;picture class=&#x22;picture-wrapper&#x22;&#x3E;
-    &#x3C;img src=&#x22;https://picsum.photos/id/1025/1440/900&#x22;&#x3E;
-  &#x3C;/picture&#x3E;
-  &#x3C;div class=&#x22;text-wrapper&#x22;&#x3E;
-    &#x3C;h3&#x3E;Lorem Ipsum&#x3C;/h3&#x3E;
-  &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;</code></pre><br>
-                <pre><code class="language-css">.grid-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-}
-.picture-wrapper,
-.text-wrapper {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-.picture-wrapper img {
-  min-height: 100%;
-  object-fit: cover;
-}
-</code></pre>
-              </div>
-              <!-- .end .column -->
-            </div>
-            <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <div>
-                  <div class="grid-example__wrapper">
-                    <picture class="grid-example__picture">
-                      <img src="https://picsum.photos/id/1025/1440/900" class="grid-example__image">
-                    </picture>
-                    <div class="grid-example__text-container">
-                      <h3 class="grid-example__headline"><strong>Lorem Ipsum</strong></h3>
-                      <p class="grid-example__paragraph">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                    </div>
-                  </div>
-                </div>
-                <style>
-                  .grid-example__wrapper {
-                    display: grid;
-                    grid-template-columns: 1fr;
-                    grid-template-rows: 1fr;
-                  }
-                  .grid-example__picture,
-                  .grid-example__text-container {
-                    grid-column-start: 1;
-                    grid-column-end: 1;
-                    grid-row-start: 1;
-                    grid-row-end: 1;
-                  }
-                  .grid-example__picture {
-                    z-index: 1;
-                  }
-                  .grid-example__picture img {
-                    min-height: 100%;
-                    object-fit: cover;
-                  }
-                  .grid-example__text-container {
-                    padding: 50px;
-                    z-index: 2;
-                  }
-                  .grid-example__headline {
-                    color: white;
-                    font-size: 80px;
-                    margin-bottom: 40px;
-                  }
-                  .grid-example__paragraph {
-                    color: white;
-                    font-size: 40px;
-                    line-height: 1.5;
-                  }
-                </style>
-              </div>
-              <!-- .end .column -->
-              <div class="column">
-                <pre><code class="language-html">&#x3C;div class=&#x22;grid-wrapper&#x22;&#x3E;
-  &#x3C;picture class=&#x22;picture-wrapper&#x22;&#x3E;
-    &#x3C;img src=&#x22;https://picsum.photos/id/1025/1440/900&#x22;&#x3E;
-  &#x3C;/picture&#x3E;
-  &#x3C;div class=&#x22;text-wrapper&#x22;&#x3E;
-    &#x3C;h3&#x3E;Lorem Ipsum&#x3C;/h3&#x3E;
-  &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;</code></pre><br>
-                <pre><code class="language-css">.grid-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-}
-.picture-wrapper,
-.text-wrapper {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-.picture-wrapper img {
-  min-height: 100%;
-  object-fit: cover;
-}
-</code></pre>
-              </div>
-              <!-- .end .column -->
-            </div>
-            <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <h3><strong>Custom properties / CSS-Variablen</strong></h3>
+                <h3><strong>Arrow-Functions</strong></h3>
                 <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
                 <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
               </div>
               <!-- .end .column -->
               <div class="column">
-                <pre><code class="language-css">html {
-    --theme-color: #BADA55;                  
-}
-h1 {
-  color: var(--theme-color);
-}
-button {
-  background-color: var(--theme-color);
-}
+                <pre><code class="language-js">const materials = [
+  'Hydrogen',
+  'Helium',
+  'Lithium',
+  'Beryllium'
+];
+
+const withoutArrowFunc = materials.map(function(material) { return material.length });
+const withArrowFunc = materials.map((material) => { return material.length });
+const withArrowFuncShort = materials.map(material => material.length);
+
+console.log(withArrowFuncShort);
+// expected output: Array [8, 6, 7, 9]
 </code></pre>
-              </div>
-              <!-- .end .column -->
-            </div>
-            <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-              <!-- .end .column -->
-              <div style="display: flex">
-                <div>
-                  <div class="custom-properties-preview-box"></div>
-                  <div class="custom-properties-preview-box"></div>
-                  <div class="custom-properties-preview-box"></div>
-                </div>
-                <style>
-                .custom-properties-preview-box {
-                  --delay: calc(var(--i, 1) * 400ms);
-                  animation: fadeIn 1000ms var(--delay) forwards;
-                  width: 100px;
-                  height: 100px;
-                  background: darkorchid;
-                  margin: 20px;
-                  opacity: 0;
-                }
-                
-                .custom-properties-preview-box:nth-child(2) {
-                  --i: 2;
-                }
-                
-                .custom-properties-preview-box:nth-child(3) {
-                  --i: 3;
-                }
-                
-                @keyframes fadeIn {
-                  100% { opacity: 1; }
-                }
-                </style>
-                <pre><code class="language-css">.el {
-  --delay: calc(var(--i, 1) * 400ms);
-  animation: fadeIn 1000ms var(--delay) forwards;
-}
-
-.el:nth-child(2) {
-  --i: 2;
-}
-
-.el:nth-child(3) {
-  --i: 3;
-}
-</code></pre>
-              </div>
-              <!-- .end .column -->
-            </div>
-            <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-                <h3><strong>object-fit</strong></h3>
-                <ul id="ObjectFitExcample" class="flexblock gallery">
-
-                  <li>
-                    <figure>
-                      <img src="https://picsum.photos/id/1025/1440/900" style="object-fit: fill">
-                      <figcaption>
-                        <h2>object-fit: fill</h2>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li>
-                    <figure>
-                      <img src="https://picsum.photos/id/1025/1440/900" style="object-fit: contain">
-                      <figcaption>
-                        <h2>object-fit: contain</h2>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li>
-                    <figure>
-                      <img src="https://picsum.photos/id/1025/1440/900" style="object-fit: cover">
-                      <figcaption>
-                        <h2>object-fit: cover</h2>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li>
-                    <figure>
-                      <img src="https://picsum.photos/id/1025/1440/900" style="object-fit: none">
-                      <figcaption>
-                        <h2>object-fit: none</h2>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li>
-                    <figure>
-                      <img src="https://picsum.photos/id/1025/1440/900" style="object-fit: scale-down">
-                      <figcaption>
-                        <h2>object-fit: scale-down</h2>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                </ul>
-                <style>
-                  #ObjectFitExcample figure:before {
-                    content: "";
-                    display: table;
-                    width: 100%;
-                    padding-top: 100%;
-                  }
-                  #ObjectFitExcample figure img {
-                    position: absolute;
-                    bottom: 64px;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    width: 100%;
-                    height: calc(100% - 64px);
-                  }
-                </style>
-            </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-                <h3><strong>object-fit mit kleinen Bildern</strong></h3>
-                <ul id="ObjectFitExcample" class="flexblock gallery">
-
-                  <li>
-                    <figure>
-                      <img src="https://picsum.photos/id/1025/300/200" style="object-fit: fill">
-                      <figcaption>
-                        <h2>object-fit: fill</h2>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li>
-                    <figure>
-                      <img src="https://picsum.photos/id/1025/300/200" style="object-fit: contain">
-                      <figcaption>
-                        <h2>object-fit: contain</h2>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li>
-                    <figure>
-                      <img src="https://picsum.photos/id/1025/300/200" style="object-fit: cover">
-                      <figcaption>
-                        <h2>object-fit: cover</h2>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li>
-                    <figure>
-                      <img src="https://picsum.photos/id/1025/300/200" style="object-fit: none">
-                      <figcaption>
-                        <h2>object-fit: none</h2>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li>
-                    <figure>
-                      <img src="https://picsum.photos/id/1025/300/200" style="object-fit: scale-down">
-                      <figcaption>
-                        <h2>object-fit: scale-down</h2>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                </ul>
-                <style>
-                  #ObjectFitExcample figure:before {
-                    content: "";
-                    display: table;
-                    width: 100%;
-                    padding-top: 100%;
-                  }
-                  #ObjectFitExcample figure img {
-                    position: absolute;
-                    bottom: 64px;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    width: 100%;
-                    height: calc(100% - 64px);
-                  }
-                </style>
-            </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-                <h3><strong>object-position</strong></h3>
-                <ul id="ObjectFitExcample" class="flexblock gallery">
-
-                  <li>
-                    <figure>
-                      <img src="https://picsum.photos/id/1025/300/200" style="object-fit: scale-down; object-position: top center">
-                      <figcaption>
-                        <h2>object-position: top center</h2>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li>
-                    <figure>
-                      <img src="https://picsum.photos/id/1025/300/200" style="object-fit: scale-down; object-position: bottom right">
-                      <figcaption>
-                        <h2>object-position: bottom right</h2>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li>
-                    <figure>
-                      <img src="https://picsum.photos/id/1025/300/200" style="object-fit: scale-down; object-position: left 10%">
-                      <figcaption>
-                        <h2>object-position: left 10%</h2>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li>
-                    <figure>
-                      <img src="https://picsum.photos/id/1025/300/200" style="object-fit: scale-down; object-position: center 100px">
-                      <figcaption>
-                        <h2>object-position: center 10px</h2>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                </ul>
-                <style>
-                  #ObjectFitExcample figure:before {
-                    content: "";
-                    display: table;
-                    width: 100%;
-                    padding-top: 100%;
-                  }
-                  #ObjectFitExcample figure img {
-                    position: absolute;
-                    bottom: 64px;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    width: 100%;
-                    height: calc(100% - 64px);
-                  }
-                </style>
-            </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <h3><strong>Fat Arrow Functions</strong></h3>
-                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
-                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
-              </div>
-              <!-- .end .column -->
-              <div class="column">
-                <pre>
-                  TODO
-</pre>
               </div>
               <!-- .end .column -->
             </div>
@@ -618,15 +129,24 @@ button {
           <div class="wrap">
             <div class="grid vertical-align">
               <div class="column">
-                <h3><strong>String Literals</strong></h3>
+                <h3><span>Wichtigster Unterschied zwischen normaler Function und Arrow-Function: </span><strong>this</strong></h3>
                 <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
                 <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
               </div>
               <!-- .end .column -->
               <div class="column">
-                <pre>
-                  TODO
-</pre>
+                <pre><code class="language-js">function Person() {
+  // new execution context
+  this.age = 0;
+
+  setInterval(function growUp() {
+    // new execution context
+    this.age++;
+  }, 1000);
+}
+
+var p = new Person();
+</code></pre>
               </div>
               <!-- .end .column -->
             </div>
@@ -634,6 +154,528 @@ button {
           </div>
           <!-- .end .wrap -->
         </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Alte Lösung:
+                </strong></h3>
+                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
+                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre><code class="language-js">function Person() {
+  var that = this;
+  that.age = 0;
+
+  setInterval(function growUp() {
+    that.age++;
+  }, 1000);
+}
+
+var p = new Person();
+</code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Mit Arrow-Function:</strong></h3>
+                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
+                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre><code class="language-js">function Person() {
+  // new execution context
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++;
+  }, 1000);
+}
+
+var p = new Person();
+</code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Klassen</strong></h3>
+              </div>
+              <div class="column">
+              </div>
+            </div>
+            <div class="grid vertical-align">
+              <div class="column">
+                <pre><code class="language-js">function Person() {
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++;
+  }, 1000);
+}
+Person.prototype.sayAge = function() {
+  console.log("Ich bin " + this.age + " alt");
+}
+
+var p = new Person();
+</code></pre>
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre><code class="language-js">class Person {
+  constructor() {
+    this.age = 0;
+
+    setInterval(() => {
+      this.age++;
+    }, 1000);
+  }
+
+  sayAge() {
+    console.log("Ich bin " + this.age + " alt");
+  }
+}
+
+var p = new Person();
+</code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+              <picture>
+                <source type="image/webp" srcset="https://caniuse.bitsofco.de/image/es6-class.webp">
+                <source type="image/png" srcset="https://caniuse.bitsofco.de/image/es6-class.png">
+                <img src="https://caniuse.bitsofco.de/image/es6-class.jpg" alt="Data on support for the es6-class feature across the major browsers from caniuse.com" style="width: 100%;height: 100%;object-fit: contain;">
+              </picture>            
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Template Strings / String Literals</strong></h3>
+                <span>Akzente Gravis "`" anstelle von doppelten bzw einfachen Anführungsstrichen.</span>
+                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
+                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre><code class="language-js">
+// alt
+console.log("Ich bin " + this.age + " alt");
+// neu
+console.log(`Ich bin ${this.age} alt`);
+
+// alt 
+var a = 5;
+var b = 10;
+console.log("Fifteen is " + (a + b) + " and\nnot " + (2 * a + b) + ".");
+// neu
+var a = 5;
+var b = 10;
+console.log(`Fifteen is ${a + b} and
+not ${2 * a + b}.`);
+                </code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Template Strings / String Literals</strong></h3>
+                <pre><code class="language-js">
+console.log("class Person {\n  constructor() {\n    this.age = 0;\n\n    setInterval(() => {\n      this.age++;\n    }, 1000);\n  }\n\n  sayAge() {\n    console.log(\"Ich bin \" + this.age + \" alt\");\n  }\n}");
+
+console.log("class Person {\n"
++ "  constructor() {\n"
++ "    this.age = 0;\n"
++ "\n"
++ "    setInterval(() => {\n"
++ "      this.age++;\n"
++ "    }, 1000);\n"
++ "  }\n"
++ "\n"
++ "  sayAge() {\n"
++ "    console.log(\"Ich bin \" + this.age + \" alt\");\n"
++ "  }\n"
++ "}"
+);
+                </code></pre>
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <h3><strong>&nbsp;</strong></h3>
+                <pre><code class="language-js">
+console.log(`class Person {
+  constructor() {
+    this.age = 0;
+
+    setInterval(() => {
+      this.age++;
+    }, 1000);
+  }
+
+  sayAge() {
+    console.log("Ich bin " + this.age + " alt");
+  }
+}`);
+                </code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <picture>
+              <source type="image/webp" srcset="https://caniuse.bitsofco.de/image/template-literals.webp">
+              <source type="image/png" srcset="https://caniuse.bitsofco.de/image/template-literals.png">
+              <img src="https://caniuse.bitsofco.de/image/template-literals.jpg" alt="Data on support for the template-literals feature across the major browsers from caniuse.com" style="width: 100%;height: 100%;object-fit: contain;">
+            </picture>    
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Default Paramter</strong></h3>
+                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
+                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre><code class="language-js">function multiply(a, b = 1) {
+  return a * b;
+}
+
+console.log(multiply(5, 2));
+// expected output: 10
+
+console.log(multiply(5));
+// expected output: 5                
+</code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>ClassList</strong></h3>
+                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
+                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre><code class="language-js">const div = document.createElement('div');
+div.className = 'foo';
+div.className = div.className + " bar";
+
+div.classList.add("anotherclass");
+div.classList.add("foo", "bar", "baz");
+
+div.classList.remove("anotherclass");
+div.classList.remove("foo", "bar", "baz");
+
+div.classList.toggle("visible");
+div.classList.toggle("visible", i < 10 );
+
+console.log(div.classList.contains("foo"));
+
+div.classList.replace("is-open", "is-closed");
+</code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Array</strong></h3>
+                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
+                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre><code class="language-js">const someArray = ["foo", "bar", "baz"];
+
+
+someArray.map((item, index) => `${item}${index}`)  // ["foo0", "bar1", "baz2"]
+
+someArray.find((item) => item.startsWith('b'))  // "bar"
+
+someArray.findIndex((item) => item.startsWith('b')) // 1
+
+someArray.filter((item, index) => item.startsWith('b'))  // ["bar", "baz"]
+
+[1, 2, 3, 4].reduce((accumulator, currentValue) => accumulator + currentValue, 0) // 10
+
+someArray.forEach(element => console.log(element));
+// foo
+// bar
+// baz
+</code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Array.from()</strong></h3>
+                <span>Erstellt ein Array aus einem Array-like Objekt</span>
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre><code class="language-js">Array.from('hello') // ["h", "e", "l", "l", "o"]
+
+Array.from(document.querySelectorAll('div'))</code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Optional Chaining</strong></h3>
+                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
+                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre><code class="language-js">const persons = [
+  {
+    name: "Max Mustermann",
+    job: {
+      position: "Developer"
+    }
+  },
+  {
+    name: "Moritz Mustermann"
+  }
+]
+
+console.log(persons[0].job.position);
+// Developer
+console.log(persons[1].job.position);
+// Uncaught TypeError: Cannot read property 'position' of undefined</code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <pre><code class="language-js">const persons = [
+  {
+    name: "Max Mustermann",
+    job: {
+      position: "Developer"
+    }
+  },
+  {
+    name: "Moritz Mustermann"
+  }
+]
+
+if(persons[0] && persons[0].job) {
+  console.log(persons[0].job.position);
+}
+// Developer
+if(persons[1] && persons[1].job) {
+  console.log(persons[1].job.position);
+}
+// undefined</code></pre>
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre><code class="language-js">const persons = [
+  {
+    name: "Max Mustermann",
+    job: {
+      position: "Developer"
+    }
+  },
+  {
+    name: "Moritz Mustermann"
+  }
+]
+
+console.log(persons[0]?.job?.position);
+// Developer
+console.log(persons[1]?.job?.position);
+// undefined</code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Destructuring</strong></h3>
+                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
+                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre><code class="language-js">var [a, , b] = [1,2,3]
+
+var { x, y } = document.querySelector('h1').getBoundingClientRect()
+
+import { func1, func8 } from "helpers"
+                </code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Rest</strong></h3>
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre><code class="language-js">
+                  function f(x, ...y) {
+                    // y is an Array
+                    return x * y.length;
+                  }
+                  f(3, "hello", true) == 6
+                </code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Spread</strong></h3>
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre><code class="language-js">
+                  function f(x, y, z) {
+                    return x + y + z;
+                  }
+                  // Pass each elem of array as argument
+                  f(...[1,2,3])
+                  // 6
+
+
+
+                  var arr1 = [1,2,3], arr2 = [4,5];
+
+                  var arr3 = [arr1, arr2, 6, 7];
+                  // [[1, 2, 3], [4, 5], 6, 7]
+
+                  var arr4 = [...arr1, ...arr2, 6, 7];
+                  // [1, 2, 3, 4, 5, 6, 7]
+                </code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <section>
           <!--.wrap = container (width: 90%) -->
           <div class="wrap">
@@ -645,9 +687,18 @@ button {
               </div>
               <!-- .end .column -->
               <div class="column">
-                <pre>
-                  TODO
-</pre>
+                <pre><code class="language-js">const myPromise = new Promise((resolve, reject) => {
+  if (Math.random() * 100 <= 90) {
+    resolve('Hello, Promises!');
+  }
+  reject(new Error('In 10% of the cases, I fail. Miserably.'));
+});
+
+myPromise.then(
+  (resolvedValue) => console.log(resolvedValue),
+  (error) => console.log(error)
+);
+</code></pre>
               </div>
               <!-- .end .column -->
             </div>
@@ -655,20 +706,26 @@ button {
           </div>
           <!-- .end .wrap -->
         </section>
+
         <section>
           <!--.wrap = container (width: 90%) -->
           <div class="wrap">
             <div class="grid vertical-align">
               <div class="column">
-                <h3><strong>ClassList add/remove/contains/toggle</strong></h3>
+                <h3><strong>Reject & Error</strong></h3>
                 <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
                 <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
               </div>
               <!-- .end .column -->
               <div class="column">
-                <pre>
-                  TODO
-</pre>
+                <pre><code class="language-js">const myPromise1 = new Promise((resolve, reject) => {
+  reject(new Error('In 10% of the cases, I fail. Miserably.'));
+});
+
+const myPromise2 = new Promise((resolve, reject) => {
+  throw 'Irgendein Error';
+});
+</code></pre>
               </div>
               <!-- .end .column -->
             </div>
@@ -676,30 +733,23 @@ button {
           </div>
           <!-- .end .wrap -->
         </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-            <div class="grid vertical-align">
-                <h3><strong>Array</strong></h3>
-            </div>
-            <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
+
+
         <section>
           <!--.wrap = container (width: 90%) -->
           <div class="wrap">
             <div class="grid vertical-align">
               <div class="column">
-                <h3><strong>Array.map()</strong></h3>
+                <h3><strong>Reject & Error</strong></h3>
                 <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
                 <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
               </div>
               <!-- .end .column -->
               <div class="column">
-                <pre>
-                  TODO
-</pre>
+                <pre><code class="language-js">myPromise.then(null, () => {...});
+
+myPromise.catch((error) => console.log(error))
+</code></pre>
               </div>
               <!-- .end .column -->
             </div>
@@ -707,20 +757,43 @@ button {
           </div>
           <!-- .end .wrap -->
         </section>
+
+
         <section>
           <!--.wrap = container (width: 90%) -->
           <div class="wrap">
             <div class="grid vertical-align">
               <div class="column">
-                <h3><strong>Array.find()</strong></h3>
-                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
-                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
+                <h3><strong>Promise Chaining</strong></h3>
+                <pre><code>// Resolved after 2 seconds
+// Resolved after 1.5 seconds
+// Resolved after 3 seconds
+// Caught an error.
+// Done.</code></pre>
               </div>
               <!-- .end .column -->
               <div class="column">
-                <pre>
-                  TODO
-</pre>
+                <pre><code class="language-js">const delay = (ms) => new Promise(
+  (resolve) => setTimeout(resolve, ms)
+);
+
+delay(2000)
+  .then(() => {
+    console.log('Resolved after 2 seconds')
+    return delay(1500);
+  })
+  .then(() => {
+    console.log('Resolved after 1.5 seconds');
+    return delay(3000);
+  }).then(() => {
+    console.log('Resolved after 3 seconds');
+    throw new Error();
+  }).catch(() => {
+    console.log('Caught an error.');
+  }).then(() => {
+    console.log('Done.');
+  });
+</code></pre>
               </div>
               <!-- .end .column -->
             </div>
@@ -728,20 +801,34 @@ button {
           </div>
           <!-- .end .wrap -->
         </section>
+
         <section>
           <!--.wrap = container (width: 90%) -->
           <div class="wrap">
             <div class="grid vertical-align">
               <div class="column">
-                <h3><strong>Array.filter()</strong></h3>
-                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
-                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
+                <h3><strong>Fetch</strong></h3>
               </div>
               <!-- .end .column -->
               <div class="column">
-                <pre>
-                  TODO
-</pre>
+                <pre><code class="language-js">
+const data = { username: 'example' };
+
+fetch('https://example.com/profile', {
+  method: 'POST', // or 'PUT'
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+.then(response => response.json())
+.then(data => {
+  console.log('Success:', data);
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
+</code></pre>
               </div>
               <!-- .end .column -->
             </div>
@@ -749,20 +836,30 @@ button {
           </div>
           <!-- .end .wrap -->
         </section>
+
         <section>
           <!--.wrap = container (width: 90%) -->
           <div class="wrap">
             <div class="grid vertical-align">
               <div class="column">
-                <h3><strong>Array.reduce()</strong></h3>
-                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
-                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
+                <h3><strong>Promise All</strong></h3>
               </div>
               <!-- .end .column -->
               <div class="column">
-                <pre>
-                  TODO
-</pre>
+                <pre><code class="language-js">function getArticlesFromApi(url) {
+  return fetch(url).then(response => response.data())
+}
+
+const allPromises = [
+  getArticlesFromApi('https://api1.de/articles'),
+  getArticlesFromApi('https://api2.de/other-articles'),
+];
+
+Promise.all(allPromises).then((values) => {
+  console.log(values);
+});
+
+// [ [...], [...] ]</code></pre>
               </div>
               <!-- .end .column -->
             </div>
@@ -770,20 +867,52 @@ button {
           </div>
           <!-- .end .wrap -->
         </section>
+
         <section>
           <!--.wrap = container (width: 90%) -->
           <div class="wrap">
             <div class="grid vertical-align">
               <div class="column">
-                <h3><strong>Array.forEach()</strong></h3>
-                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
-                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
+                <h3><strong>Async/Await</strong></h3>
+                <pre><code class="language-js">fetch('coffee.jpg')
+.then(response => {
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  return response.blob();
+})
+.then(myBlob => {
+  let objectURL = URL.createObjectURL(myBlob);
+  let image = document.createElement('img');
+  image.src = objectURL;
+  document.body.appendChild(image);
+})
+.catch(e => {
+  console.log('There has been a problem with your fetch operation: ' + e.message);
+});</code></pre>
               </div>
               <!-- .end .column -->
               <div class="column">
-                <pre>
-                  TODO
-</pre>
+                <h3><strong>&nbsp;</strong></h3>
+                <pre><code class="language-js">async function myFetch() {
+  let response = await fetch('coffee.jpg');
+
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  let myBlob = await response.blob();
+
+  let objectURL = URL.createObjectURL(myBlob);
+  let image = document.createElement('img');
+  image.src = objectURL;
+  document.body.appendChild(image);
+}
+
+myFetch()
+.catch(e => {
+  console.log('There has been a problem with your fetch operation: ' + e.message);
+});</code></pre>
               </div>
               <!-- .end .column -->
             </div>
@@ -791,51 +920,28 @@ button {
           </div>
           <!-- .end .wrap -->
         </section>
+
         <section>
           <!--.wrap = container (width: 90%) -->
           <div class="wrap">
             <div class="grid vertical-align">
+              <div class="column">
                 <h3><strong>Object</strong></h3>
-            </div>
-            <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <h3><strong>Object.keys()</strong></h3>
                 <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
                 <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
               </div>
               <!-- .end .column -->
               <div class="column">
-                <pre>
-                  TODO
-</pre>
-              </div>
-              <!-- .end .column -->
-            </div>
-            <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <h3><strong>Object.values()</strong></h3>
-                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
-                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
-              </div>
-              <!-- .end .column -->
-              <div class="column">
-                <pre>
-                  TODO
-</pre>
+                <pre><code class="language-js">const obj = { a: 'lorem ipsum', b: true, c: { d: 123 } };
+
+console.log(Object.keys(obj)); 
+// ["a", "b", "c"]
+
+console.log(Object.values(obj));
+// ["lorem ipsum", true, { d: 123 }]
+
+console.log(Object.entries(obj)); 
+// [ ["a", "lorem ipsum"], ["b", "true"], ["c", { d: 123 }] ]</code></pre>
               </div>
               <!-- .end .column -->
             </div>
@@ -848,15 +954,16 @@ button {
           <div class="wrap">
             <div class="grid vertical-align">
               <div class="column">
-                <h3><strong>Object.entries()</strong></h3>
+                <h3><strong>var, let & const</strong></h3>
                 <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
                 <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
               </div>
               <!-- .end .column -->
               <div class="column">
-                <pre>
-                  TODO
-</pre>
+                <pre><code class="language-js">var var1 = 'a';
+let var2 = 'b';
+const var3 = 'c';
+</code></pre>
               </div>
               <!-- .end .column -->
             </div>
@@ -869,15 +976,29 @@ button {
           <div class="wrap">
             <div class="grid vertical-align">
               <div class="column">
-                <h3><strong>let & const</strong></h3>
-                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
-                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
+                <h3><strong>Function Scoped (var)</strong></h3>
+                <pre><code class="language-js">var greeter = "hey hi";
+var times = 4;
+
+if (times > 3) {
+  var greeter = "say Hello instead"; 
+}
+
+console.log(greeter) 
+// "say Hello instead"</code></pre>
               </div>
               <!-- .end .column -->
               <div class="column">
-                <pre>
-                  TODO
-</pre>
+                <h3><strong>Block Scoped (let, const)</strong></h3>
+                <pre><code class="language-js">let greeter = "hey hi";
+let times = 4;
+
+if (times > 3) {
+    let greeter = "say Hello instead"; 
+}
+
+console.log(greeter) 
+// "hey hi"</code></pre>
               </div>
               <!-- .end .column -->
             </div>
@@ -890,15 +1011,47 @@ button {
           <div class="wrap">
             <div class="grid vertical-align">
               <div class="column">
-                <h3><strong>let</strong></h3>
-                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
-                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
+                <h3><strong>Re-Declaration</strong></h3>
+                <pre><code class="language-js">var value = 123;
+var value = true;
+                </code></pre>
               </div>
               <!-- .end .column -->
               <div class="column">
-                <pre>
-                  TODO
-</pre>
+                <h3><strong>&nbsp;</strong></h3>
+                <pre><code class="language-js">let value = 123;
+let value = true;
+// Uncaught SyntaxError: Identifier 'value' has already been declared</code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Unterschiedliches Hoisting</strong></h3>
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre><code class="language-js">function funcWithVar() {
+  console.log(str);
+  var str = "lorem ipsum"
+}
+funcWithVar()
+// undefined
+
+function funcWithLet() {
+  console.log(str);
+  let str = "lorem ipsum"
+}
+funcWithLet()
+// Uncaught ReferenceError: Cannot access 'str' before initialization
+</code></pre>
               </div>
               <!-- .end .column -->
             </div>
@@ -917,9 +1070,18 @@ button {
               </div>
               <!-- .end .column -->
               <div class="column">
-                <pre>
-                  TODO
-</pre>
+                <pre><code class="language-js">const obj1 = { a: 1 };
+obj1 = { a: 2 };
+// Uncaught TypeError: Assignment to constant variable.
+
+
+const obj2 = { a: 1 };
+obj2.a = 2;
+
+
+// hard const
+const obj3 = Object.freeze({ a: 123 })
+</code></pre>
               </div>
               <!-- .end .column -->
             </div>
@@ -932,57 +1094,13 @@ button {
           <div class="wrap">
             <div class="grid vertical-align">
               <div class="column">
-                <h3><strong>Default Parameter</strong></h3>
+                <h3><strong>Map & Set</strong></h3>
                 <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
                 <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
               </div>
               <!-- .end .column -->
               <div class="column">
-                <pre>
-                  TODO
-</pre>
-              </div>
-              <!-- .end .column -->
-            </div>
-            <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <h3><strong>Function Rest Parameter</strong></h3>
-                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
-                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
-              </div>
-              <!-- .end .column -->
-              <div class="column">
-                <pre>
-                  TODO
-</pre>
-              </div>
-              <!-- .end .column -->
-            </div>
-            <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <h3><strong>Destruction</strong></h3>
-                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
-                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
-              </div>
-              <!-- .end .column -->
-              <div class="column">
-                <pre>
-                  TODO
-</pre>
+<a target="blank" rel="noopener noreferrer" href="https://javascript.info/map-set">https://javascript.info/map-set</a>
               </div>
               <!-- .end .column -->
             </div>
