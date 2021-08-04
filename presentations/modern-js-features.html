@@ -84,11 +84,151 @@ Prism.languages.javascript=Prism.languages.extend("clike",{"class-name":[Prism.l
   <body>
 
     <main role="main">
-      <article id="webslides" class="horizontal">
+      <article id="webslides" class="vertical">
         <section>
           <!--.wrap = container (width: 90%) -->
           <div class="wrap aligncenter">
             <h1 class="text-landing">Moderne JS Features</h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>var, let & const</strong></h3>
+                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
+                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre><code class="language-js">var var1 = 'a';
+let var2 = 'b';
+const var3 = 'c';
+</code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Function Scoped (var)</strong></h3>
+                <pre><code class="language-js">var greeter = "hey hi";
+var times = 4;
+
+if (times > 3) {
+  var greeter = "say Hello instead"; 
+}
+
+console.log(greeter) 
+// "say Hello instead"</code></pre>
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <h3><strong>Block Scoped (let, const)</strong></h3>
+                <pre><code class="language-js">let greeter = "hey hi";
+let times = 4;
+
+if (times > 3) {
+    let greeter = "say Hello instead"; 
+}
+
+console.log(greeter) 
+// "hey hi"</code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Re-Declaration</strong></h3>
+                <pre><code class="language-js">var value = 123;
+var value = true;
+                </code></pre>
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <h3><strong>&nbsp;</strong></h3>
+                <pre><code class="language-js">let value = 123;
+let value = true;
+// Uncaught SyntaxError: Identifier 'value' has already been declared</code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Unterschiedliches Hoisting</strong></h3>
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre><code class="language-js">function funcWithVar() {
+  console.log(str);
+  var str = "lorem ipsum"
+}
+funcWithVar()
+// undefined
+
+function funcWithLet() {
+  console.log(str);
+  let str = "lorem ipsum"
+}
+funcWithLet()
+// Uncaught ReferenceError: Cannot access 'str' before initialization
+</code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>const</strong></h3>
+                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
+                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre><code class="language-js">const obj1 = { a: 1 };
+obj1 = { a: 2 };
+// Uncaught TypeError: Assignment to constant variable.
+
+
+const obj2 = { a: 1 };
+obj2.a = 2;
+
+
+// hard const
+const obj3 = Object.freeze({ a: 123 })
+</code></pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
           </div>
           <!-- .end .wrap -->
         </section>
@@ -110,8 +250,14 @@ Prism.languages.javascript=Prism.languages.extend("clike",{"class-name":[Prism.l
   'Beryllium'
 ];
 
-const withoutArrowFunc = materials.map(function(material) { return material.length });
-const withArrowFunc = materials.map((material) => { return material.length });
+const withoutArrowFunc = materials.map(function(material) { 
+                                          return material.length 
+                                        });
+
+const withArrowFunc = materials.map((material) => { 
+                                      return material.length 
+                                    });
+
 const withArrowFuncShort = materials.map(material => material.length);
 
 console.log(withArrowFuncShort);
@@ -357,17 +503,6 @@ console.log(`class Person {
               <!-- .end .column -->
             </div>
             <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-            <picture>
-              <source type="image/webp" srcset="https://caniuse.bitsofco.de/image/template-literals.webp">
-              <source type="image/png" srcset="https://caniuse.bitsofco.de/image/template-literals.png">
-              <img src="https://caniuse.bitsofco.de/image/template-literals.jpg" alt="Data on support for the template-literals feature across the major browsers from caniuse.com" style="width: 100%;height: 100%;object-fit: contain;">
-            </picture>    
           </div>
           <!-- .end .wrap -->
         </section>
@@ -740,7 +875,7 @@ const myPromise2 = new Promise((resolve, reject) => {
           <div class="wrap">
             <div class="grid vertical-align">
               <div class="column">
-                <h3><strong>Reject & Error</strong></h3>
+                <h3><strong>Catch</strong></h3>
                 <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
                 <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
               </div>
@@ -942,146 +1077,6 @@ console.log(Object.values(obj));
 
 console.log(Object.entries(obj)); 
 // [ ["a", "lorem ipsum"], ["b", "true"], ["c", { d: 123 }] ]</code></pre>
-              </div>
-              <!-- .end .column -->
-            </div>
-            <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <h3><strong>var, let & const</strong></h3>
-                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
-                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
-              </div>
-              <!-- .end .column -->
-              <div class="column">
-                <pre><code class="language-js">var var1 = 'a';
-let var2 = 'b';
-const var3 = 'c';
-</code></pre>
-              </div>
-              <!-- .end .column -->
-            </div>
-            <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <h3><strong>Function Scoped (var)</strong></h3>
-                <pre><code class="language-js">var greeter = "hey hi";
-var times = 4;
-
-if (times > 3) {
-  var greeter = "say Hello instead"; 
-}
-
-console.log(greeter) 
-// "say Hello instead"</code></pre>
-              </div>
-              <!-- .end .column -->
-              <div class="column">
-                <h3><strong>Block Scoped (let, const)</strong></h3>
-                <pre><code class="language-js">let greeter = "hey hi";
-let times = 4;
-
-if (times > 3) {
-    let greeter = "say Hello instead"; 
-}
-
-console.log(greeter) 
-// "hey hi"</code></pre>
-              </div>
-              <!-- .end .column -->
-            </div>
-            <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <h3><strong>Re-Declaration</strong></h3>
-                <pre><code class="language-js">var value = 123;
-var value = true;
-                </code></pre>
-              </div>
-              <!-- .end .column -->
-              <div class="column">
-                <h3><strong>&nbsp;</strong></h3>
-                <pre><code class="language-js">let value = 123;
-let value = true;
-// Uncaught SyntaxError: Identifier 'value' has already been declared</code></pre>
-              </div>
-              <!-- .end .column -->
-            </div>
-            <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <h3><strong>Unterschiedliches Hoisting</strong></h3>
-              </div>
-              <!-- .end .column -->
-              <div class="column">
-                <pre><code class="language-js">function funcWithVar() {
-  console.log(str);
-  var str = "lorem ipsum"
-}
-funcWithVar()
-// undefined
-
-function funcWithLet() {
-  console.log(str);
-  let str = "lorem ipsum"
-}
-funcWithLet()
-// Uncaught ReferenceError: Cannot access 'str' before initialization
-</code></pre>
-              </div>
-              <!-- .end .column -->
-            </div>
-            <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <h3><strong>const</strong></h3>
-                <!-- <p class="text-intro">Each parent <code>&lt;section&gt;</code> in the #webslides element is an individual slide. </p>
-                <p>Code is clean, scalable, and well documented. It uses <strong>intuitive markup</strong> with popular naming conventions. There's no need to overuse classes or nesting. <strong>Based on <a href="https://github.com/jennschiffer/SimpleSlides">SimpleSlides</a>, by <a href="http://jennmoney.biz">Jenn Schiffer</a></strong> :)</p> -->
-              </div>
-              <!-- .end .column -->
-              <div class="column">
-                <pre><code class="language-js">const obj1 = { a: 1 };
-obj1 = { a: 2 };
-// Uncaught TypeError: Assignment to constant variable.
-
-
-const obj2 = { a: 1 };
-obj2.a = 2;
-
-
-// hard const
-const obj3 = Object.freeze({ a: 123 })
-</code></pre>
               </div>
               <!-- .end .column -->
             </div>
